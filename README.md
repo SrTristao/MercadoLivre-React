@@ -1,6 +1,6 @@
 ## Mercado Livre Test
 
-This project has been created with NodeJS + TypeScript + React
+This project has been created with NodeJS + TypeScript + React + Redux
 
 TypeScript with nodeJS? Why not? =).
 
