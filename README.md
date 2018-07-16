@@ -16,6 +16,11 @@ TypeScript with nodeJS? Why not? =).
  First compile typeScript, after start server.
  > - npm run compile
  > - npm run start
+ 
+ OR
+ 
+ > - npm run server
+ 
 
 ### Execute front
 

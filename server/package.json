@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon ./dist_server/app.js",
     "compile": "tsc -w",
-    "test": "mocha --timeout 10000"
+    "test": "mocha --timeout 10000",
+	"server": "tsc && npm start"
   },
   "author": "Tristao",
   "license": "ISC",
