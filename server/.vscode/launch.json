@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [{
+          "type": "node",
+          "request": "launch",
+          "name": "Launch",
+          "sourceMaps": true,
+          "stopOnEntry": true,
+          "console": "internalConsole",
+          "cwd": "${workspaceRoot}",
+          "program": "${workspaceRoot}/server/app.ts",
+          "outFiles": ["${workspaceRoot}/dist_server/**/*.js"]
+      },
+      {
+          "type": "node",
+          "request": "attach",
+          "name": "Attach to Process",
+          "port": 3131,
+          "outFiles": []
+      }
+  ]
+  }
