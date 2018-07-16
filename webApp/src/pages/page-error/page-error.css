@@ -1,0 +1,14 @@
+.page-error-container {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .page-error-container.margin-top {
+    margin-top: 30px; }
+  .page-error-container .titulo {
+    font-size: 18px;
+    font-weight: bold; }
+  .page-error-container li {
+    font-size: 16px; }

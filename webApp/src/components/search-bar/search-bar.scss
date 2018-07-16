@@ -1,0 +1,26 @@
+.search-bar-container {
+    background-color: #FFE600;
+    color: #333333;
+    height: 50px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+    .input-search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .input-group { 
+            span {
+                cursor: pointer;
+            }
+        }
+
+        .logo {
+            content: url('../../assets/Logo_ML.png');
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    }    
+}

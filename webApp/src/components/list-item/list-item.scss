@@ -1,0 +1,14 @@
+.list-item-container {
+    &.margin-items {
+        margin-top: 30px;
+    }
+    
+    .line {
+        display: flex;
+        flex-direction: column;
+        &:after {
+            content: '';
+            border: 0.5px solid #eeeeee;        
+        }
+    }
+}

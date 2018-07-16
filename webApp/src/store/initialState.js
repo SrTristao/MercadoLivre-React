@@ -1,7 +1,6 @@
 export default {
     items: {
-        items: [],
-        item_selected: {},
+        itemsArr: [],        
         isFetchingItems: false,
         errorMessage: null     
     },

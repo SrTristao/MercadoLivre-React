@@ -1,0 +1,52 @@
+.item-details-container {
+    &.margin-items {
+        margin-top: 30px;
+    }    
+    display: flex;
+    flex-direction: column;
+    background-color: white;    
+    align-items: center;    
+    padding-top: 16px;
+    margin-bottom: 16px;
+    color: #333333;
+    .top {
+        width: 100%;
+        display: flex;
+        flex-direction: row;    
+        justify-content: space-around;    
+        #thumbnail {
+            height: 543px;
+        }
+        .comprar {
+            height: 100%;
+            width: 200px;
+            .detalhe {
+                margin-top: 32px;
+                font-size: 14px;
+            }
+            .titulo {
+                margin-top: 16px;
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .preco {
+                margin-top: 32px;
+                font-size: 46px;
+            }
+            button {
+                margin-top: 32px;                
+                width: 200px;
+                background-color: #3483FA;
+            }
+        }
+    }    
+    .descricao {
+        font-size: 16px;        
+        width: 100%;
+        padding: 32px;
+        .titulo-descricao {
+            font-size: 28px;
+            margin-bottom: 32px;
+        }
+    }
+}

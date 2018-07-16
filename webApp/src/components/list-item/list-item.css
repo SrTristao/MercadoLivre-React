@@ -1,0 +1,9 @@
+.list-item-container.margin-items {
+  margin-top: 30px; }
+
+.list-item-container .line {
+  display: flex;
+  flex-direction: column; }
+  .list-item-container .line:after {
+    content: '';
+    border: 0.5px solid #eeeeee; }
