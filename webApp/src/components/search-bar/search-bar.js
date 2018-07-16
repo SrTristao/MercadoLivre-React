@@ -14,6 +14,11 @@ class SearchBar extends Component {
         }
     }
 
+    _handleKeyPress(e) {
+        if (e.key === 'Enter')
+            this.getItems(this.state.searchItems)
+    }
+
     getItems(searchItems) {
         if(this.state.searchItems !== ''){
             this.state.getItems(searchItems);
@@ -44,7 +49,7 @@ class SearchBar extends Component {
                     <div>                        
                         <form>
                         <div className="input-group">    
-                            <input type="text" className="form-control" value={this.state.searchItems} onChange={e => this.handleChange(e)}/>
+                            <input type="text" className="form-control" value={this.state.searchItems} onChange={e => this.handleChange(e)} onKeyPress={e => this._handleKeyPress(e)}/>
                             <span onClick={e => this.getItems(this.state.searchItems)} className="input-group-addon" id="basic-addon1"><i className="glyphicon glyphicon-search"></i></span>
                         </div>
                         </form>    

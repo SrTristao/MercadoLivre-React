@@ -58,6 +58,10 @@ export function getItemDetails(id) {
         dispatch(itemsRequest());
 
         const onSuccess = response => {
+            if (response.data === 'produto desconhecido') {
+                dispatch(goNotFound())
+                return;
+            }
 
             dispatch(itemSelected(response));
             return response;
