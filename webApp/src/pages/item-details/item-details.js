@@ -14,7 +14,7 @@ class ItemDetails extends Component {
 
     componentDidMount() {
         const id = this.props.location.pathname.replace(/\/items\//, '');
-        if (id !== undefined && (this.props.item_selected.id !== undefined && this.props.item_selected.id !== id))
+        if (id !== undefined && (this.props.item_selected.id === undefined || (this.props.item_selected.id !== undefined && this.props.item_selected.id !== id)))
             this.props.getItemDetails(id);
 
     }

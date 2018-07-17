@@ -49,7 +49,8 @@ export function cleanItems() {
     return {
         type: ITEMS_CLEAN,
         itemsArr: [],
-        item_selected: {}
+        item_selected: {},
+        isFetchingItems: false
     }
 }
 
@@ -91,8 +92,7 @@ export function getItems(searchItems) {
         const onSuccess = (response) => {
             const { data } = response;
             if (data.length === 0) {
-                dispatch(goNotFound());                
-                return;
+                return dispatch(goNotFound());                
             }
             dispatch(itemsSuccess(response));                        
             return response;
@@ -100,10 +100,10 @@ export function getItems(searchItems) {
 
         const onError = (error) => {
             const { message } = error;
-            dispatch(itemsError(message)); 
+            dispatch(itemsError(message));
             if (message === "Network Error")  
-                dispatch(gotServiceError());         
-            return error;
+                return gotServiceError();         
+            return error;            
         }
 
         try {

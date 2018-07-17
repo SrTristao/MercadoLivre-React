@@ -25,7 +25,8 @@ export function items(state = initialState.items, action) {
     case ITEMS_CLEAN:
       return Object.assign({}, state, {
         itemsArr: action.itemsArr,
-        item_selected: action.item_selected
+        item_selected: action.item_selected,
+        isFetchingItems: action.isFetchingItems
       })
     case ITEM_SELECTED:
       return Object.assign({}, state, {

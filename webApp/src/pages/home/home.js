@@ -8,14 +8,21 @@ import history from '../../provider/history';
 import routes from '../../provider/sub-routes';
 import SearchBar from '../../components/search-bar/search-bar';
 import Loadable from 'react-loading-overlay';
+import { cleanItems } from '../../store/actions/items';
 import './home.css';
 
 class Home extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            ...props
-        }
+        this.state = {}
+    }
+
+    componentDidMount() {
+        this.props.cleanItems();
+    }
+
+    componentWillUpdate() {
+        if (this.props.itemsArr.length > 0) this.props.cleanItems();
     }
 
     render() {
@@ -39,10 +46,17 @@ class Home extends Component {
 
 function mapStateToProps(state) {
     const { items } = state;
-    const { isFetchingItems } = items;
+    const { isFetchingItems, itemsArr } = items;
     return {
-        isFetchingItems        
+        isFetchingItems,
+        itemsArr     
     }
 }
 
-export default withRouter(connect(mapStateToProps)(Home));
+const mapDispatchToProps = dispatch => {
+    return {
+        cleanItems: () => dispatch(cleanItems())
+    }
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));
